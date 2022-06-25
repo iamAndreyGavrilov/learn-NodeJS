@@ -1,6 +1,6 @@
 const express = require('express')
-
 const path = require('path')
+const morgan = require('morgan')
 
 const createPath = (page) =>
   path.resolve(__dirname, 'ejs8_views', `${page}.ejs`)
@@ -14,6 +14,10 @@ const PORT = 3000
 app.listen(PORT, (error) => {
   error ? console.log(error) : console.log(`listening port ${PORT}`)
 })
+
+app.use(morgan(':method :url :status :res[content-length] - :response-time ms'))
+
+app.use(express.static('styles'))
 
 app.get('/', (req, res) => {
   const title = 'Home'
