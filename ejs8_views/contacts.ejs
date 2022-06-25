@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Node.js</title>
+    <title>Node.js | <%= title%></title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
@@ -57,19 +57,16 @@
     </style>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/posts">Posts</a></li>
-        <li><a href="/add-post">New Post</a></li>
-        <li><a href="/contacts">Contacts</a></li>
-      </ul>
-    </nav>
+    <%- include('./partials/nav.ejs') %>
     <h1>Contacts:</h1>
     <ul>
-      <li><a target="_blank" href="http://youtube.com">YouTube</a></li>
-      <li><a target="_blank" href="http://github.com">GitHub</a></li>
-      <li><a target="_blank" href="http://twitter.com">Twitter</a></li>
+      <% if (contacts.length) { %>
+        <% contacts.forEach(({ link, name }) => { %>
+          <li>
+            <a target="_blank" href="<%= link %>"><%= name %></a>
+          </li>
+        <% }) %>
+      <% } %>
     </ul>
   </body>
 </html>
