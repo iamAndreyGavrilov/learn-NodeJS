@@ -1,0 +1,26 @@
+{
+  "name": "node-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "9_npmPackages",
+  "scripts": {
+    "dev": "nodemon 9_npmPackages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamAndreyGavrilov/learn-NodeJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamAndreyGavrilov/learn-NodeJS/issues"
+  },
+  "homepage": "https://github.com/iamAndreyGavrilov/learn-NodeJS#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  },
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  }
+}
