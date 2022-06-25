@@ -2,9 +2,9 @@
   "name": "node-js",
   "version": "1.0.0",
   "description": "",
-  "main": "9_npmPackages",
+  "main": "9_npmPackages.js",
   "scripts": {
-    "dev": "nodemon 9_npmPackages"
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
